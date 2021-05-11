@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Задача «Котограм»</title>
+    <link type="text/css" rel="stylesheet" href="index.css">
+</head>
+<body>
+<!--SVG спрайт-->
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite">
+    <defs>
+        <linearGradient id="icon-logo-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" class="logo-gradient-1"></stop>
+            <stop offset="50%" class="logo-gradient-2"></stop>
+            <stop offset="100%" class="logo-gradient-3"></stop>
+        </linearGradient>
+        <symbol id="icon-arrow" viewBox="0 0 49 32">
+            <path d="M.5 7.401L24.428 31.33 48.357 7.4 41.569.613l-17.14 17.14L7.288.614z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="icon-fill" viewBox="0 0 48 48">
+            <path d="M8.395 8.395h30.996v30.996H8.395z"/>
+            <path d="M35.946 0v5.166h6.888v6.673H48V0zM5.166 5.166h6.673V0H0v11.839h5.166zM42.834 42.834h-6.888V48H48V35.946h-5.166zM5.166 35.946H0V48h11.839v-5.166H5.166z"/>
+        </symbol>
+        <symbol id="icon-flip" viewBox="0 0 48 37">
+            <path d="M0 29.9l19.084-11.788L0 6.325z"/>
+            <path d="M28.916 18.112L48 29.9V6.325L28.916 18.112zm15.058 4.425l-7.163-4.425 7.163-4.424v8.849z" fill-rule="nonzero"/>
+            <path d="M21.398 8.05h5.205v5.175h-5.205zM21.398 0h5.205v5.175h-5.205zM21.398 16.1h5.205v5.175h-5.205zM21.398 23.575h5.205v5.175h-5.205zM21.398 31.625h5.205V36.8h-5.205z"/>
+        </symbol>
+        <symbol id="icon-logo" viewBox="0 0 48 48">
+            <path d="M0 0v48h48V0H0zm24.107 16.782a7.12 7.12 0 0 1 7.11 7.111 7.12 7.12 0 0 1-7.11 7.111 7.12 7.12 0 0 1-7.111-7.11 7.12 7.12 0 0 1 7.11-7.112zM6.4 5.547h7.253v4.693H6.4V5.547zM41.6 41.6H6.4V24.747h4.225c.443 7.053 6.318 12.657 13.482 12.657 7.163 0 13.039-5.604 13.481-12.657H41.6V41.6z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="icon-rotate" viewBox="0 0 48 48">
+            <path d="M24 48c13.234 0 24-9.765 24-21.753 0-11.99-10.766-21.749-24-21.749-.88 0-1.768.046-2.651.136V1.119c0-.452-.308-.863-.761-1.038a1.353 1.353 0 0 0-1.355.251l-8.504 7.722c-.484.438-.484 1.138 0 1.583l8.5 7.739c.362.319.886.418 1.359.243.453-.177.76-.585.76-1.035v-3.899c.88-.146 1.764-.212 2.651-.212 8.384 0 15.207 6.18 15.207 13.774 0 7.593-6.825 13.778-15.207 13.778-8.382 0-15.203-6.187-15.203-13.778 0-.616-.553-1.12-1.24-1.12H1.24c-.684 0-1.241.504-1.241 1.12C0 38.235 10.774 48 24 48z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="icon-scale" viewBox="0 0 48 48">
+            <path d="M0 0v48h48V0H0zm6.4 6.4h33.682L6.4 40.227V6.4zm34.56 32.427H25.6v-6.4h15.36v6.4z" fill-rule="nonzero"/>
+            <path d="M24 13.071h-4.375v-4.5h-6.25v4.5H9V19.5h4.375V24h6.25v-4.5H24z"/>
+        </symbol>
+    </defs>
+</svg>
+
+<!-- разметка -->
+<form>
+    <article class="catogram">
+        <input type="radio" name="fill" checked class="inp-fill-no" id="inp-fill-no">
+        <input type="radio" name="fill" class="inp-fill-yes" id="inp-fill-yes">
+
+        <input type="radio" name="scaling" checked class="inp-rotate-1" id="inp-rotate-1">
+        <input type="radio" name="scaling" class="inp-rotate-2" id="inp-rotate-2">
+        <input type="radio" name="scaling" class="inp-rotate-3" id="inp-rotate-3">
+        <input type="radio" name="scaling" class="inp-rotate-4" id="inp-rotate-4">
+
+        <input type="reset" class="inp-logo" id="inp-logo">
+
+        <input type="radio" name="rotation" checked class="inp-scale-1" id="inp-scale-1">
+        <input type="radio" name="rotation" class="inp-scale-2" id="inp-scale-2">
+        <input type="radio" name="rotation" class="inp-scale-3" id="inp-scale-3">
+        <input type="radio" name="rotation" class="inp-scale-4" id="inp-scale-4">
+
+        <input type="radio" name="flip" checked class="inp-flip-no" id="inp-flip-no">
+        <input type="radio" name="flip" class="inp-flip-yes" id="inp-flip-yes">
+
+        <input type="radio" name="filter" checked class="inp-filter-no" id="inp-filter-no">
+        <input type="radio" name="filter" class="inp-filter-bw" id="inp-filter-bw">
+        <input type="radio" name="filter" class="inp-filter-sepia" id="inp-filter-sepia">
+        <input type="radio" name="filter" class="inp-filter-blue" id="inp-filter-blue">
+        <input type="radio" name="filter" class="inp-filter-jakal" id="inp-filter-jakal">
+        <input type="radio" name="filter" class="inp-filter-blur" id="inp-filter-blur">
+
+        <section class="photo-section">
+            <div class="header">
+                <label for="inp-fill-yes" class="default-label inp-fill-yes-label">
+                    <svg class="icon fill">
+                        <use xlink:href="#icon-fill"></use>
+                    </svg>
+                </label>
+                <label for="inp-fill-no" class="label inp-fill-no-label">
+                    <svg class="icon fill">
+                        <use xlink:href="#icon-fill"></use>
+                    </svg>
+                </label>
+
+                <label for="inp-scale-1" class="label inp-scale-1-label">
+                    <svg class="icon scale">
+                        <use xlink:href="#icon-scale"></use>
+                    </svg>
+                </label>
+                <label for="inp-scale-2" class="default-label inp-scale-2-label">
+                    <svg class="icon scale">
+                        <use xlink:href="#icon-scale"></use>
+                    </svg>
+                </label>
+                <label for="inp-scale-3" class="label inp-scale-3-label">
+                    <svg class="icon scale">
+                        <use xlink:href="#icon-scale"></use>
+                    </svg>
+                </label>
+                <label for="inp-scale-4" class="label inp-scale-4-label">
+                    <svg class="icon scale">
+                        <use xlink:href="#icon-scale"></use>
+                    </svg>
+                </label>
+
+                <label for="inp-logo" class="inp-logo-label">
+                    <svg class="icon logo">
+                        <use xlink:href="#icon-logo"></use>
+                    </svg>
+                </label>
+
+                <label for="inp-rotate-1" class="label inp-rotate-1-label">
+                    <svg class="icon rotate">
+                        <use xlink:href="#icon-rotate"></use>
+                    </svg>
+                </label>
+                <label for="inp-rotate-2" class="default-label inp-rotate-2-label">
+                    <svg class="icon rotate">
+                        <use xlink:href="#icon-rotate"></use>
+                    </svg>
+                </label>
+                <label for="inp-rotate-3" class="label inp-rotate-3-label">
+                    <svg class="icon rotate">
+                        <use xlink:href="#icon-rotate"></use>
+                    </svg>
+                </label>
+                <label for="inp-rotate-4" class="label inp-rotate-4-label">
+                    <svg class="icon rotate">
+                        <use xlink:href="#icon-rotate"></use>
+                    </svg>
+                </label>
+
+                <label for="inp-flip-yes" class="default-label inp-flip-yes-label">
+                    <svg class="icon flip">
+                        <use xlink:href="#icon-flip"></use>
+                    </svg>
+                </label>
+                <label for="inp-flip-no" class="label inp-flip-no-label">
+                    <svg class="icon flip">
+                        <use xlink:href="#icon-flip"></use>
+                    </svg>
+                </label>
+            </div>
+            <div class="photo-container">
+                <div class="photo-container-scale">
+                    <div class="photo-container-rotate">
+                        <div class="photo-container-flip">
+                            <img alt="Main photo" title="Main photo" src="jakal.png" class="photo jakal">
+                            <img alt="Main photo" title="Main photo" src="cat2.png" class="photo usual">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="filters-section">
+            <input type="radio" name="scroll" checked class="start" id="start">
+            <input type="radio" name="scroll" class="center" id="center">
+            <input type="radio" name="scroll" class="end" id="end">
+
+            <svg class="icon left start">
+                <use xlink:href="#icon-arrow"></use>
+            </svg>
+            <label for="start" class="center">
+                <svg class="icon left">
+                    <use xlink:href="#icon-arrow"></use>
+                </svg>
+            </label>
+            <label for="center" class="end">
+                <svg class="icon left">
+                    <use xlink:href="#icon-arrow"></use>
+                </svg>
+            </label>
+            <div class="filters">
+                <div class="filter filter-no">
+                    <span class="filter-name">Без фильтра</span>
+                    <div class="filter-image-container">
+                        <label for="inp-filter-no">
+                            <img alt="No filter" title="No filter" src="cat2.png" class="filter-image-1">
+                        </label>
+                    </div>
+                </div>
+                <div class="filter filter-bw">
+                    <span class="filter-name">Черно-белый</span>
+                    <div class="filter-image-container">
+                        <label for="inp-filter-bw">
+                            <img alt="cat" title="cat" src="cat2.png" class="filter-image-2">
+                        </label>
+                    </div>
+                </div>
+                <div class="filter filter-sepia">
+                    <span class="filter-name">Сепия</span>
+                    <div class="filter-image-container">
+                        <label for="inp-filter-sepia">
+                            <img alt="Black and White" title="Black and White"
+                                 src="cat2.png" class="filter-image-3">
+                        </label>
+                    </div>
+                </div>
+                <div class="filter filter-blue">
+                    <span class="filter-name ">Упорото-синий</span>
+                    <div class="filter-image-container">
+                        <label for="inp-filter-blue">
+                            <img alt="Inverted" title="Inverted" src="cat2.png" class="filter-image-4">
+                        </label>
+                    </div>
+                </div>
+                <div class="filter filter-jakal">
+                    <span class="filter-name">Шакализатор</span>
+                    <div class="filter-image-container">
+                        <label for="inp-filter-jakal">
+                            <img title="Jakalized" alt="Jakalized" src="jakal.png" class="filter-image-5">
+                        </label>
+                    </div>
+                </div>
+                <div class="filter filter-blur">
+                    <span class="filter-name">Консоли</span>
+                    <div class="filter-image-container">
+                        <label for="inp-filter-blur">
+                            <img alt="Blur" title="Blur" src="cat2.png" class="filter-image-6">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <label for="center" class="start">
+                <svg class="icon right">
+                    <use xlink:href="#icon-arrow"></use>
+                </svg>
+            </label>
+            <label for="end" class="center">
+                <svg class="icon right">
+                    <use xlink:href="#icon-arrow"></use>
+                </svg>
+            </label>
+            <svg class="icon right end">
+                <use xlink:href="#icon-arrow"></use>
+            </svg>
+        </section>
+    </article>
+</form>
+</body>
+</html>

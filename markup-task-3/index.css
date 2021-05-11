@@ -1,0 +1,239 @@
+body
+{
+    background-color: #f5deb3;
+    color: #222;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+@font-face
+{
+    font-family: 'Century Old Style Std';
+    src: local('Century Old Style Std Regular')
+        , local('CenturyOldStyleStd-Regular')
+        , url('CenturyOldStyleStd-Regular.woff2') format('woff2')
+        , url('CenturyOldStyleStd-Regular.woff') format('woff');
+    /* прекрасное позиционирование запятых из-за кривых правил линта*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+.night-mode:checked ~ section,
+.night-mode:checked ~ section > div
+{
+    color: #f5deb3;
+    background-color: #222;
+}
+
+.night-mode:checked ~ section > .red-block,
+.night-mode:checked ~ section hr
+{
+    border-color: #f5deb3;
+}
+
+.small-font-size:checked ~ .newspaper-text
+{
+    font-size: 12px;
+}
+
+.medium-font-size:checked ~ .newspaper-text
+{
+    font-size: 14px;
+}
+
+.large-font-size:checked ~ .newspaper-text
+{
+    font-size: 18px;
+}
+
+.arial-font-family:checked ~ .newspaper-text
+{
+    font-family: Arial, serif;
+}
+
+.times-font-family:checked ~ .newspaper-text
+{
+    font-family: Times, serif;
+}
+
+.helvetica-font-family:checked ~ .newspaper-text
+{
+    font-family: Helvetica, serif;
+}
+
+.century-font-family:checked ~ .newspaper-text
+{
+    font-family: 'Century Old Style', serif;
+}
+
+.title-section,
+.undertitle,
+.main-title,
+.first-column-titles,
+.column-titles
+{
+    text-align: center;
+}
+
+.title-section
+{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    padding: 0 0 10px;
+}
+
+.red-block
+{
+    border: 3px double #333;
+    color: #333;
+}
+
+.red-block-left
+{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    text-align: left;
+}
+
+.vertical-text
+{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.display-setting
+{
+    color: #000;
+}
+
+.font-size-range,
+.font-selection
+{
+    width: 50%;
+}
+
+.red-block-right
+{
+    font: 20px bold impact, sans-serif;
+    line-height: 19px;
+}
+
+.newspaper-title
+{
+    font: 60px Times, serif;
+    margin: 1rem;
+    font-variant: small-caps;
+}
+
+.undertitle
+{
+    margin: 1% 2% 0;
+    padding: 0 0 2%;
+}
+
+.newspaper-info
+{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.newspaper-info-n,
+.newspaper-info-cost
+{
+    padding: 0 5%;
+}
+
+.newspaper-info-n
+{
+    text-align: left;
+}
+
+.newspaper-info-cost
+{
+    text-align: right;
+}
+
+.thicc-hr
+{
+    border: 2px solid #222;
+    margin: -10px 0 0;
+    padding: 0;
+}
+
+.thinn-hr
+{
+    border: 1px solid #222;
+    margin: 5px 0 0;
+}
+
+.thicc-text
+{
+    font-weight: bolder;
+}
+
+.underlined-text
+{
+    text-decoration: underline;
+}
+
+.small-text
+{
+    font-size: 9px;
+}
+
+.main-title
+{
+    padding: 0 10%;
+    margin: .25rem;
+    font: 40px bold Didot, serif;
+    word-spacing: 1.25rem;
+}
+
+.newspaper-text
+{
+    column-count: 6;
+    column-rule: 1px solid #222;
+    column-fill: balance;
+    text-align: justify;
+}
+
+.span-hr-pair
+{
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.text::first-letter
+{
+    font-size: 1.1rem;
+}
+
+.first-column-titles
+{
+    font-size: 1.5rem;
+}
+
+.column-titles
+{
+    font-size: 16px;
+}
+
+.short-hr
+{
+    border: 1px solid #222;
+    width: 25%;
+}
+
+.picture-block
+{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.picture
+{
+    margin-left: 1px;
+    width: 100%;
+}

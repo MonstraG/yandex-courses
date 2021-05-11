@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>CSS Селекторс 2000</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="../global.css">
+    </head>
+    <body>
+        <h1 class="global-heading">&nbsp;</h1>
+        <p>Решите задачу, используя <code>background: &lt;color&gt;</code></p>
+
+        <main class="global-results">
+            <style>
+                .global-scope > div
+                {
+                    background: #ffb366;
+                }
+
+                div > div
+                {
+                    background: #fff;
+                }
+
+                .global-scope > div:first-of-type > div:last-of-type
+                {
+                    background: #98ff66;
+                }
+
+                .global-scope > div:nth-of-type(2) > div:nth-of-type(even)
+                {
+                    background: #ff6698;
+                }
+
+                .global-scope > div:nth-of-type(3) > div:nth-of-type(odd)
+                {
+                    background: #6698ff;
+                }
+
+                .global-scope > div:last-of-type > div:first-of-type
+                {
+                    background: #ff6;
+                }
+            </style>
+
+            <section class="global-result">
+                <article class="global-scope">
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="global-result">
+                <img class="global-goal">
+            </section>
+        </main>
+
+        <nav class="global-nav">
+            <a class="global-prev">Предыдущее</a>
+            <a class="global-next">Следующее</a>
+        </nav>
+
+        <script src="../global.js"></script>
+    </body>
+</html>

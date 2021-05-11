@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Задача «Морда»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <input type="checkbox" id="popular" checked class="inp-popular">
+    <input type="checkbox" id="anecdotes" checked class="inp-anecdotes">
+    <input type="checkbox" id="tv-schedule" checked class="inp-tv-schedule">
+    <input type="checkbox" id="car-news" checked class="inp-car-news">
+    <input type="checkbox" id="weather" checked class="inp-weather">
+    <input type="checkbox" id="traffic" checked class="inp-traffic">
+    <input type="checkbox" id="map" checked class="inp-map">
+    <input type="checkbox" id="afisha" checked class="inp-afisha">
+    <header>
+        <a class="location">
+            <!-- you have no idea how much time I've spent trying to make a pixel-perfect cut of the icon -->
+            <img src="src/geo-icon.png" alt="geolocation icon" title="geolocation icon">
+            Екатеринбург
+        </a>
+        <div class="options">
+            <input type="checkbox" name="options" id="options" class="inp-options">
+            <label for="options">Настройка</label>
+            <div class="options-menu">
+                <label for="popular">Популярные</label>
+                <label for="anecdotes">Анекдоты</label>
+                <label for="tv-schedule">Телепрограмма</label>
+                <label for="car-news">Автомобильные новости</label>
+                <label for="weather">Погода</label>
+                <label for="traffic">Пробки</label>
+                <label for="map">Карта</label>
+                <label for="afisha">Афиша</label>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article class="news-block">
+            <section class="news">
+                <h2 class="news-title"><a class="widget-title" href="">Сейчас в СМИ</a></h2>
+                <h3 class="news-title"><a class="widget-title-second" href="">в Екатеринбурге</a></h3>
+                <span class="news-time gray-text">13 ноября, понедельник <a href="">16:56</a></span>
+                <ul class="news-list">
+                    <li><a>СМИ сообщили об экстренной госпитализации Януковича</a></li>
+                    <li><a>СК возбудил дело после самоподрыва женщины в Грозном</a></li>
+                    <li><a>Украинский генерал заявил о риске «большой войны» с Россией</a></li>
+                    <li><a>Президент Аргентины объявил траур по экипажу подлодки «Сан-Хуан»</a></li>
+                    <li><a>Умер исполнитель песни «Плачет девушка в автомате» Евгений Осинын</a></li>
+                </ul>
+                <div>
+                    <!-- those are actually correct for MOEX 16 nov 13:35 -->
+                    <div class="stock">
+                        <a class="bold-text">USD ЦБ</a> 66,04
+                        <span class="stock-change">+0,14</span>
+                    </div>
+                    <div class="stock">
+                        <a class="bold-text">EUR ЦБ</a> 74,89
+                        <span class="stock-change">+0,21</span>
+                    </div>
+                    <div class="stock">
+                        <a class="bold-text">НЕФТЬ</a> 66,04
+                        <span class="stock-change">+1,59%</span>
+                    </div>
+                </div>
+            </section>
+            <section class="news-teaser">
+                <a><img src="src/bery!.png" alt="Маркетплейс Беру" title="Маркетплейс Беру"></a>
+                <h2 class="teaser-title"><a>Только один день</a></h2>
+                <span class="teaser-desc">специальные скидки на маркетплейсе Беру</span>
+            </section>
+        </article>
+        <article>
+            <section class="search">
+                <ul class="search-links-list">
+                    <li class="search-link"><a>Видео</a></li>
+                    <li class="search-link"><a>Картинки</a></li>
+                    <li class="search-link"><a>Новости</a></li>
+                    <li class="search-link"><a>Карты</a></li>
+                    <li class="search-link"><a>Маркет</a></li>
+                    <li class="search-link"><a>Переводчик</a></li>
+                    <li class="search-link"><a>Музыка</a></li>
+                    <li class="search-link"><a>ТВ онлайн</a></li>
+                    <li class="search-link"><a>еще</a></li>
+                </ul>
+                <form class="search-bar-section">
+                    <img class="logo" src="src/yandex-logo.png" title="Yandex logo" alt="Yandex logo">
+                    <input type="text" class="search-bar" id="search-bar">
+                    <label for="search-bar"></label>
+                    <img class="search-bar-input-types" src="src/more-input-types.png"
+                         title="more input types" alt="more input types">
+                    <input type="submit" class="search-button" value="Найти">
+                    <div class="search-button-arrow"></div>
+                </form>
+                <div class="search-example">
+                    Найдется все. Например,
+                    <a class="gray-text"
+                       href="https://yandex.ru/search/?text=как+получить+автомат+на+курсе">
+                        как получить автомат на курсе
+                    </a>
+                </div>
+            </section>
+            <section class="ford">
+                <!-- class names like "banner" and "ad" are being display: none'd by adblock, lol -->
+                <a href="http://www.ford.ru/SBE/SpecialOffers/SpecialOffer_Vehicles/SpecialOffer_PV">
+                    <img src="src/ford.png" alt="ford" title="ford">
+                </a>
+            </section>
+        </article>
+        <article>
+            <section class="column1">
+                <div class="widget popular">
+                    <h2><a class="widget-title" href="">Посещаемое</a></h2>
+                    <ul class="widget-list">
+                        <li><a class="bold-text">Маркет</a> &#8212; <a>китайская распродажa</a></li>
+                        <li><a class="bold-text">Авто.ру</a> &#8212; <a>Туссан третьей серии</a></li>
+                        <li><a class="bold-text">Недвижимость</a> &#8212; <a>продажа студии</a></li>
+                        <li><a class="bold-text">Работа</a> &#8212; <a>охранником</a></li>
+                        <li><a class="bold-text">Здоровье</a> &#8212; <a>врач на связи</a></li>
+                        <li><a class="bold-text">Коллекции</a> &#8212; <a>как мелировать волосы</a></li>
+                        <li><a class="bold-text">Авиабилеты</a> &#8212; <a>из Екатеринбурга</a></li>
+                    </ul>
+                </div>
+                <div class="widget anecdotes">
+                    <h2><a class="widget-title" href="">Лучшие анекдоты</a></h2>
+                    <input type="radio" name="anecdote" checked id="anecdote1" class="inp-anecdote">
+                    <div class="anecdote">
+                        Раздел: <a href="">медицинские</a>
+                        <span class="anecdote-text">- Вас лечить хорошо или бесплатно?</span>
+                        <label class="show-more" for="anecdote2">
+                            <img src="src/show-more.png" alt="Eще" title="Eще">Показать еще
+                        </label>
+                    </div>
+
+                    <input type="radio" name="anecdote" id="anecdote2" class="inp-anecdote">
+                    <div class="anecdote">
+                        Раздел: <a href="">технологии</a>
+                        <span class="anecdote-text">
+                            &#8212; Надо сделать что-то необычное, что еще никто ни разу не делал.. <br>
+                            &#8212; Начать пользоваться яндекс.баром?
+                        </span>
+                        <label class="show-more" for="anecdote3">
+                            <img src="src/show-more.png" alt="Eще" title="Eще">Показать еще
+                        </label>
+                    </div>
+
+                    <input type="radio" name="anecdote" id="anecdote3" class="inp-anecdote">
+                    <div class="anecdote">
+                        Раздел: <a href="">грусть</a>
+                        <span class="anecdote-text">Я, серьезно, потратил полчаса наверное</span>
+                        <label class="show-more" for="anecdote4">
+                            <img src="src/show-more.png" alt="Eще" title="Eще">Показать еще
+                        </label>
+                    </div>
+
+                    <input type="radio" name="anecdote" id="anecdote4" class="inp-anecdote">
+                    <div class="anecdote">
+                        Раздел: <a href="">печаль</a>
+                        <span class="anecdote-text">Что бы найти хоть сколько-то</span>
+                        <label class="show-more" for="anecdote5">
+                            <img src="src/show-more.png" alt="Eще" title="Eще">Показать еще
+                        </label>
+                    </div>
+
+                    <input type="radio" name="anecdote" id="anecdote5" class="inp-anecdote">
+                    <div class="anecdote">
+                        Раздел: <a href="">тоска</a>
+                        <span class="anecdote-text">интересные анекодты, но их просто нет.</span>
+                        <label class="show-more" for="anecdote1">
+                            <img src="src/show-more.png" alt="Eще" title="Eще">казать еще
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section class="column2">
+                <div class="widget tv-schedule">
+                    <div class="widget-title-complex">
+                        <h2><a class="widget-title" href="">Телепрограмма</a></h2>
+                        <form action="https://yandex.ru/portal/tvstream">
+                            <input type="submit" value="▶  ТВ онлайн" class="tv-link-button">
+                        </form>
+                    </div>
+                    <ul class="widget-list">
+                        <li>16:00 <a>Понять. Простить.</a><a class="gray-text">41 Домашний</a></li>
+                        <li>16:30 <a>Место встречи</a><a class="gray-text">НТВ</a></li>
+                        <li>16:30 <a>Детективы</a><a class="gray-text">Пятый канал</a></li>
+                        <li>16:30 <a>Новости</a><a class="gray-text">РЕН ТВ</a></li>
+                        <li>16:30 <a>Гадалка</a><a class="gray-text">ТВ-3</a></li>
+                        <li>16:30 <a>Реальные посоны</a><a class="gray-text">ТНТ</a></li>
+                    </ul>
+                </div>
+                <div class="widget car-news">
+                    <h2><a class="widget-title" href="">Автомобильные новости</a></h2>
+                    <ul class="widget-list car-news-list">
+                        <li class="car-news-item">
+                            <a>Правительство поддержало законопроект о регистрации машиномест</a>
+                            <span class="car-news-time gray-text">12:19</span>
+                        </li>
+                        <li class="car-news-item">
+                            <a>Обзор новейшего т-34 за которым выстроилась очередь</a>
+                            <span class="car-news-time gray-text">12:19</span>
+                        </li>
+                        <li class="car-news-item">
+                            <a>&laquo;Лады&raquo; осностят системой управления со смартфона</a>
+                            <span class="car-news-time gray-text">11:40</span>
+                        </li>
+                        <li class="car-news-item">
+                            <a>Священик отчитал прихожан, а они заставили его продать Porshe</a>
+                            <span class="car-news-time gray-text">11:30</span>
+                        </li>
+                        <li class="car-news-item">
+                            <a>Электрокары запрещены в Лаосе</a>
+                            <span class="car-news-time gray-text">10:01</span>
+                        </li>
+                        <li class="car-news-item">
+                            <a>Решена главная диллема автоматических автомобилей</a>
+                            <span class="car-news-time gray-text">19:18</span>
+                        </li>
+                        <li class="car-news-item">
+                            <a>В Саудовской Аравии предложили перейти на использование необработанной
+                                нефти вместо бензина</a>
+                            <span class="car-news-time gray-text">00:00</span>
+                        </li>
+                        <li class="car-news-item">
+                            <a>Кстати, вы знали что Саудовская Аравия так называется потому что текущая
+                                правящая династия - Сауды. Если бы их звали как-то еще, название страны
+                                было бы другое.</a>
+                            <span class="car-news-time gray-text">-12:-12</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="column3">
+                <div class="widget weather">
+                    <div class="widget-title-complex">
+                        <h2><a class="widget-title" href="">Погода</a></h2>
+                        <img class="widget-title-img" src="src/weather.png" title="Weather" alt="Weather">
+                        <span class="widget-title-after-image">-3 °C</span>
+                    </div>
+                    Вечер -5, ночь -7
+                </div>
+                <div class="widget traffic">
+                    <div class="widget-title-complex">
+                        <h2><a class="widget-title" href="">Пробки</a></h2>
+                        <img class="widget-title-img" src="src/traffic.png" title="traffic" alt="traffic">
+                        <span class="widget-title-after-image">2 балла</span>
+                    </div>
+                    Дороги почти свободны
+                </div>
+                <div class="widget map">
+                    <h2><a class="widget-title" href="">Карта Екатеринбурга</a></h2>
+                    <ul class="widget-list">
+                        <li><span class="widget-map-text"><a>Такси</a> <a>Расписания</a></span></li>
+                        <li><a>Сообщество соседей</a></li>
+                    </ul>
+                </div>
+                <div class="widget afisha">
+                    <h2><a class="widget-title" href="">Афиша</a></h2>
+                    <ul class="widget-list">
+                        <li><a>Фантастические твари...</a><span class="gray-text">премьера</span></li>
+                        <li><a>Оверлорд</a><span class="gray-text">ужасы</span></li>
+                        <li><a>Девушка, которая застряла...</a><span class="gray-text">экшон</span></li>
+                        <li><a>Смолфут</a><span class="gray-text">комедия</span></li>
+                        <li><a>Богемская рапсодия</a><span class="gray-text">мюзикл</span></li>
+                        <li class="bold-text"><a>Концерты</a> &#8212; <a>Сергей Лазарев</a></li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+    <aside>
+        <section class="login">
+            <span class="account bold-text">login</span>
+            <span class="mail">Почта</span> <span class="mail-counter bold-text">1337</span>
+        </section>
+    </aside>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "main": "math.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && mocha --exit test"
+  },
+  "dependencies": {
+    "eslint": "4.8.0",
+    "eslint-config-hrundel": "latest",
+    "mocha": "5.2.0"
+  }
+}

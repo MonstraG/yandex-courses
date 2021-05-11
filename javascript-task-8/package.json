@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "main": "async.js",
+  "scripts": {
+    "lint": "eslint .",
+    "mocha": "mocha --exit *.spec.js",
+    "test": "npm run lint && npm run mocha"
+  },
+  "dependencies": {
+    "eslint": "5.8.0",
+    "eslint-config-hrundel": "1.4.0",
+    "got": "9.3.2",
+    "mocha": "5.2.0",
+    "sinon": "7.1.1"
+  }
+}

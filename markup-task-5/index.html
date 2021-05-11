@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Задача «Про котиков»</title>
+</head>
+<body>
+    <header>
+        <p>Мурмаркет</p>
+    </header>
+    <main>
+        <form class="carousel">
+            <input class="inp-cat1" type="radio" name="carousel" checked="checked" id="Barrymore">
+            <input class="inp-cat2" type="radio" name="carousel" id="Domino">
+            <input class="inp-cat3" type="radio" name="carousel" id="Karl">
+            <input class="inp-cat4" type="radio" name="carousel" id="Nancy">
+            <input class="inp-cat5" type="radio" name="carousel" id="Persik">
+            <input class="inp-cat6" type="radio" name="carousel" id="Podymoi">
+            <input class="inp-cat7" type="radio" name="carousel" id="Spike">
+            <input class="inp-cat8" type="radio" name="carousel" id="Stasya">
+            <input class="inp-cat9" type="radio" name="carousel" id="Tiger">
+            <input class="inp-cat10" type="radio" name="carousel" id="Zarine">
+
+            <input class="inp-modal-cat1" type="radio" name="modal" id="Barrymore-modal">
+            <input class="inp-modal-cat2" type="radio" name="modal" id="Domino-modal">
+            <input class="inp-modal-cat3" type="radio" name="modal" id="Karl-modal">
+            <input class="inp-modal-cat4" type="radio" name="modal" id="Nancy-modal">
+            <input class="inp-modal-cat5" type="radio" name="modal" id="Persik-modal">
+            <input class="inp-modal-cat6" type="radio" name="modal" id="Podymoi-modal">
+            <input class="inp-modal-cat7" type="radio" name="modal" id="Spike-modal">
+            <input class="inp-modal-cat8" type="radio" name="modal" id="Stasya-modal">
+            <input class="inp-modal-cat9" type="radio" name="modal" id="Tiger-modal">
+            <input class="inp-modal-cat10" type="radio" name="modal" id="Zarine-modal">
+            <input type="radio" name="modal" id="no-modal">
+
+            <div class="cat-box cat1">
+                <label for="Barrymore">
+                    <img class="cat-photo" alt="Barrymore" title="Barrymore" src="src/cats/Barrymore.jpg">
+                </label>
+                <div class="overlay-container">
+                    <label for="Barrymore-modal">
+                        <span class="overlay">
+                            Беримор
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cat-box cat2">
+                <label for="Domino">
+                    <img class="cat-photo" alt="Domino" title="Domino" src="src/cats/Domino.jpg">
+                </label>
+                <div class="overlay-container">
+                    <label for="Domino-modal">
+                        <span class="overlay">
+                            Домино
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cat-box cat3">
+                <label for="Karl">
+                    <img class="cat-photo" alt="Karl" title="Karl" src="src/cats/Karl.jpg">
+                </label>
+                <div class="overlay-container">
+                    <label for="Karl-modal">
+                        <span class="overlay">
+                            Карл
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cat-box cat4">
+                <label for="Nancy">
+                    <img class="cat-photo" alt="Nancy" title="Nancy" src="src/cats/Nancy.jpg">
+                </label>
+                <div class="overlay-container">
+                    <label for="Nancy-modal">
+                        <span class="overlay">
+                            Нэнси
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cat-box cat5">
+                <label for="Persik">
+                    <img class="cat-photo" alt="Persik" title="Persik" src="src/cats/Persik.png">
+                </label>
+                <div class="overlay-container">
+                    <label for="Persik-modal">
+                        <span class="overlay">
+                            Персик
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cat-box cat6">
+                <label for="Podymoi">
+                    <img class="cat-photo" alt="Podymoi" title="Podymoi" src="src/cats/Podymoi.jpg">
+                </label>
+                <div class="overlay-container">
+                    <label for="Podymoi-modal">
+                        <span class="overlay">
+                            Подумой
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cat-box cat7">
+                <label for="Spike">
+                    <img class="cat-photo" alt="Spike" title="Spike" src="src/cats/Spike.jpg">
+                </label>
+                <div class="overlay-container">
+                    <label for="Spike-modal">
+                        <span class="overlay">
+                            Спайк
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cat-box cat8">
+                <label for="Stasya">
+                    <img class="cat-photo" alt="Stasya" title="Stasya" src="src/cats/Stasya.jpg">
+                </label>
+                <div class="overlay-container">
+                    <label for="Stasya-modal">
+                        <span class="overlay">
+                            Стася
+                        </span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="cat-box cat9">
+                <label for="Tiger">
+                    <img class="cat-photo" alt="Tiger" title="Tiger" src="src/cats/Tiger.jpg">
+                </label>
+                <div class="overlay-container">
+                    <label for="Tiger-modal">
+                        <span class="overlay">
+                            Тигрик
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cat-box cat10">
+                <label for="Zarine">
+                    <img class="cat-photo" alt="Zarine" title="Zarine" src="src/cats/Zarine.jpg">
+                </label>
+                <div class="overlay-container">
+                    <label for="Zarine-modal">
+                        <span class="overlay">
+                            Зарина
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="modal-box modal-cat1">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Barrymore"
+                             title="Barrymore" src="src/cats/Barrymore.jpg">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Бэримор</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <div class="modal-box modal-cat2">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Domino" title="Domino" src="src/cats/Domino.jpg">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Домино</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <div class="modal-box modal-cat3">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Karl" title="Karl" src="src/cats/Karl.jpg">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Карл</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <div class="modal-box modal-cat4">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Nancy" title="Nancy" src="src/cats/Nancy.jpg">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Нэнси</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <div class="modal-box modal-cat5">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Persik" title="Persik" src="src/cats/Persik.png">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Персик</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <div class="modal-box modal-cat6">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Podymoi" title="Podymoi" src="src/cats/Podymoi.jpg">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Подумой</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <div class="modal-box modal-cat7">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Spike" title="Spike" src="src/cats/Spike.jpg">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Спайк</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <div class="modal-box modal-cat8">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Stasya" title="Stasya" src="src/cats/Stasya.jpg">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Стася</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <div class="modal-box modal-cat9">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Tiger" title="Tiger" src="src/cats/Tiger.jpg">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Тигрик</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <div class="modal-box modal-cat10">
+                <article class="modal-box-content">
+                    <section class="modal-photo-section">
+                        <img class="modal-photo" alt="Zarine" title="Zarine" src="src/cats/Zarine.jpg">
+                    </section>
+                    <section class="modal-text-section">
+                        <p class="modal-cat-name">Зарина</p>
+                        <p class="modal-cat-info">
+                            Со слов бывшего владельца; найден в парке под кустом, без подписки, получил
+                            временную регистрацию на передержке, через пару месяцев попал на постоянное
+                            место жительство. <br>
+                            Пытается получить кредит на позолоченный лоток.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <label class="exit" for="no-modal">
+                <img class="exit-img" alt="Exit" title="Exit" src="src/icons/cross.png">
+            </label>
+            <label for="no-modal" class="background-exit"></label>
+            
+            <section class="circles">
+                <label for="Barrymore" class="circle1">&#9711;</label>
+                <span class="fisheye1">&#9673;</span>
+                <label for="Domino" class="circle2">&#9711;</label>
+                <span class="fisheye2">&#9673;</span>
+                <label for="Karl" class="circle3">&#9711;</label>
+                <span class="fisheye3">&#9673;</span>
+                <label for="Nancy" class="circle4">&#9711;</label>
+                <span class="fisheye4">&#9673;</span>
+                <label for="Persik" class="circle5">&#9711;</label>
+                <span class="fisheye5">&#9673;</span>
+                <label for="Podymoi" class="circle6">&#9711;</label>
+                <span class="fisheye6">&#9673;</span>
+                <label for="Spike" class="circle7">&#9711;</label>
+                <span class="fisheye7">&#9673;</span>
+                <label for="Stasya" class="circle8">&#9711;</label>
+                <span class="fisheye8">&#9673;</span>
+                <label for="Tiger" class="circle9">&#9711;</label>
+                <span class="fisheye9">&#9673;</span>
+                <label for="Zarine" class="circle10">&#9711;</label>
+                <span class="fisheye10">&#9673;</span>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-left">
+            Напишите нам;<br>
+            <ul class="write-us-list">
+                <li class="write-us-list-item"><a href="mailto;cats@babuli.ru">cats@babuli.ru</a></li>
+                <li class="write-us-list-item"><a href="mailto;vnuchek@babuli.ru">vnuchek@babuli.ru</a></li>
+            </ul>
+        </div>
+        <p class="footer-right">
+            &copy; 2018 OOO &laquo;<a href="">Бабушкины котятки</a>&raquo;
+        </p>
+    </footer>
+</body>
+</html>

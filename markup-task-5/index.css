@@ -1,0 +1,408 @@
+body
+{
+    font: 18px Helvetica, serif;
+    color: #444;
+    width: 99%;
+}
+
+header
+{
+    font: 32px 'PT SansNarrow';
+    text-align: center;
+    line-height: .75rem;
+    position: fixed;
+    width: 99%; /* нужно отдельно указать, равный body - из-за position */
+    z-index: 2000;
+    border: 2px solid #aaa;
+    background-color: #fff;
+    margin-top: -10px;
+}
+
+header > p::first-letter
+{
+    color: #f00;
+}
+
+footer,
+main
+{
+    border: 2px solid #aaa;
+    border-top: 0;
+    width: 100%; /* не 99, а 100, ведь наследует 99 от body */
+    overflow: hidden;
+}
+
+/* main */
+
+.carousel
+{
+    display: inline-block;
+    text-align: center;
+    padding: 100px 0 20px;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+input
+{
+    display: none;
+}
+
+.cat-box
+{
+    width: 25vw;
+    vertical-align: middle;
+    padding: 2vw;
+    display: inline-block;
+}
+
+.cat-photo
+{
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+}
+
+/* боковые котики меньше и прозрачнее */
+
+.inp-cat1:checked:checked ~ .cat1 .cat-photo,
+.inp-cat2:checked:checked ~ .cat2 .cat-photo,
+.inp-cat3:checked:checked ~ .cat3 .cat-photo,
+.inp-cat4:checked:checked ~ .cat4 .cat-photo,
+.inp-cat5:checked:checked ~ .cat5 .cat-photo,
+.inp-cat6:checked:checked ~ .cat6 .cat-photo,
+.inp-cat7:checked:checked ~ .cat7 .cat-photo,
+.inp-cat8:checked:checked ~ .cat8 .cat-photo,
+.inp-cat9:checked:checked ~ .cat9 .cat-photo,
+.inp-cat10:checked:checked ~ .cat10 .cat-photo
+{
+    opacity: 1;
+    height: 25vw;
+    width: 25vw;
+}
+
+.cat-photo
+{
+    opacity: .7;
+    height: 20vw;
+    width: 20vw;
+}
+
+.overlay-container
+{
+    position: absolute;
+    bottom: 0;
+    width: 25vw;
+    height: 25vw;
+    margin: 2vw -25vw;
+    top: 0;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .5s ease;
+    text-align: center;
+    z-index: 1000;
+}
+
+.overlay
+{
+    color: #f1f1f1;
+    font-size: 36px;
+}
+
+.overlay-container,
+.modal-box
+{
+    display: none;
+}
+
+.inp-cat1:checked:checked ~ .cat1 .overlay-container,
+.inp-cat2:checked:checked ~ .cat2 .overlay-container,
+.inp-cat3:checked:checked ~ .cat3 .overlay-container,
+.inp-cat4:checked:checked ~ .cat4 .overlay-container,
+.inp-cat5:checked:checked ~ .cat5 .overlay-container,
+.inp-cat6:checked:checked ~ .cat6 .overlay-container,
+.inp-cat7:checked:checked ~ .cat7 .overlay-container,
+.inp-cat8:checked:checked ~ .cat8 .overlay-container,
+.inp-cat9:checked:checked ~ .cat9 .overlay-container,
+.inp-cat10:checked:checked ~ .cat10 .overlay-container
+{
+    display: initial;
+}
+
+.inp-cat1:checked:checked ~ .cat1:hover .overlay-container,
+.inp-cat2:checked:checked ~ .cat2:hover .overlay-container,
+.inp-cat3:checked:checked ~ .cat3:hover .overlay-container,
+.inp-cat4:checked:checked ~ .cat4:hover .overlay-container,
+.inp-cat5:checked:checked ~ .cat5:hover .overlay-container,
+.inp-cat6:checked:checked ~ .cat6:hover .overlay-container,
+.inp-cat7:checked:checked ~ .cat7:hover .overlay-container,
+.inp-cat8:checked:checked ~ .cat8:hover .overlay-container,
+.inp-cat9:checked:checked ~ .cat9:hover .overlay-container,
+.inp-cat10:checked:checked ~ .cat10:hover .overlay-container
+{
+    /* отображает оверлей */
+    opacity: 1;
+}
+
+/* отображение модалочек */
+
+.inp-modal-cat1:checked ~ .modal-cat1,
+.inp-modal-cat2:checked ~ .modal-cat2,
+.inp-modal-cat3:checked ~ .modal-cat3,
+.inp-modal-cat4:checked ~ .modal-cat4,
+.inp-modal-cat5:checked ~ .modal-cat5,
+.inp-modal-cat6:checked ~ .modal-cat6,
+.inp-modal-cat7:checked ~ .modal-cat7,
+.inp-modal-cat8:checked ~ .modal-cat8,
+.inp-modal-cat9:checked ~ .modal-cat9,
+.inp-modal-cat10:checked ~ .modal-cat10
+{
+    display: block;
+}
+
+.modal-box
+{
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal-box-content
+{
+    position: absolute;
+    height: 50%;
+    width: 75%;
+    white-space: normal;
+    margin: 20vh 20vw;
+    color: #fff;
+    text-align: left;
+    display: table;
+    z-index: 4000;
+}
+
+.modal-photo-section,
+.modal-text-section
+{
+    display: table-cell;
+    width: 50%;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.modal-cat-name
+{
+    font-size: 36px;
+}
+
+.modal-photo
+{
+    height: 50vh;
+}
+
+.inp-modal-cat1:checked ~ .exit,
+.inp-modal-cat2:checked ~ .exit,
+.inp-modal-cat3:checked ~ .exit,
+.inp-modal-cat4:checked ~ .exit,
+.inp-modal-cat5:checked ~ .exit,
+.inp-modal-cat6:checked ~ .exit,
+.inp-modal-cat7:checked ~ .exit,
+.inp-modal-cat8:checked ~ .exit,
+.inp-modal-cat9:checked ~ .exit,
+.inp-modal-cat10:checked ~ .exit
+{
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    z-index: 4000;
+}
+
+.exit,
+.background-exit
+{
+    display: none;
+}
+
+.exit-img
+{
+    float: right;
+    width: 50px;
+    filter: invert(100%);
+    /* файл - с черным крестиком, так проще всего исправить :) */
+}
+
+.inp-modal-cat1:checked ~ .background-exit,
+.inp-modal-cat2:checked ~ .background-exit,
+.inp-modal-cat3:checked ~ .background-exit,
+.inp-modal-cat4:checked ~ .background-exit,
+.inp-modal-cat5:checked ~ .background-exit,
+.inp-modal-cat6:checked ~ .background-exit,
+.inp-modal-cat7:checked ~ .background-exit,
+.inp-modal-cat8:checked ~ .background-exit,
+.inp-modal-cat9:checked ~ .background-exit,
+.inp-modal-cat10:checked ~ .background-exit
+{
+    display: inline-block;
+    position: absolute;
+    z-index: 3500;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* footer */
+
+footer
+{
+    display: table;
+    table-layout: fixed;
+    font: 14px Arial;
+    width: 100%;
+}
+
+a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.footer-left,
+.footer-right
+{
+    padding: 5px;
+}
+
+.footer-left
+{
+    display: table-cell;
+    text-align: left;
+}
+
+.write-us-list
+{
+    list-style: none;
+    margin: 2px;
+    padding: 0;
+}
+
+.write-us-list-item
+{
+    background: url(src/icons/mail.png) left center no-repeat;
+    margin: 2px;
+    padding: 0 24px;
+}
+
+.footer-right
+{
+    display: table-cell;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+/* scroll */
+
+.inp-cat1:checked ~ .cat-box
+{
+    transform: translate(35vw);
+}
+
+.inp-cat2:checked ~ .cat-box
+{
+    transform: translate(5vw);
+}
+
+.inp-cat3:checked ~ .cat-box
+{
+    transform: translate(-24vw);
+}
+
+.inp-cat4:checked ~ .cat-box
+{
+    transform: translate(-54vw);
+}
+
+.inp-cat5:checked ~ .cat-box
+{
+    transform: translate(-83vw);
+}
+
+.inp-cat6:checked ~ .cat-box
+{
+    transform: translate(-112vw);
+}
+
+.inp-cat7:checked ~ .cat-box
+{
+    transform: translate(-141vw);
+}
+
+.inp-cat8:checked ~ .cat-box
+{
+    transform: translate(-171vw);
+}
+
+.inp-cat9:checked ~ .cat-box
+{
+    transform: translate(-200vw);
+}
+
+.inp-cat10:checked ~ .cat-box
+{
+    transform: translate(-229vw);
+}
+
+.circles
+{
+    display: block;
+    color: #888;
+    transform: translate(-97vw);
+}
+
+/* circles */
+
+.fisheye1,
+.fisheye2,
+.fisheye3,
+.fisheye4,
+.fisheye5,
+.fisheye6,
+.fisheye7,
+.fisheye8,
+.fisheye9,
+.fisheye10
+{
+    display: none;
+}
+
+.inp-cat1:checked ~ section > .circle1,
+.inp-cat2:checked ~ section > .circle2,
+.inp-cat3:checked ~ section > .circle3,
+.inp-cat4:checked ~ section > .circle4,
+.inp-cat5:checked ~ section > .circle5,
+.inp-cat6:checked ~ section > .circle6,
+.inp-cat7:checked ~ section > .circle7,
+.inp-cat8:checked ~ section > .circle8,
+.inp-cat9:checked ~ section > .circle9,
+.inp-cat10:checked ~ section > .circle10
+{
+    display: none;
+}
+
+.inp-cat1:checked ~ section > .fisheye1,
+.inp-cat2:checked ~ section > .fisheye2,
+.inp-cat3:checked ~ section > .fisheye3,
+.inp-cat4:checked ~ section > .fisheye4,
+.inp-cat5:checked ~ section > .fisheye5,
+.inp-cat6:checked ~ section > .fisheye6,
+.inp-cat7:checked ~ section > .fisheye7,
+.inp-cat8:checked ~ section > .fisheye8,
+.inp-cat9:checked ~ section > .fisheye9,
+.inp-cat10:checked ~ section > .fisheye10
+{
+    display: initial;
+}

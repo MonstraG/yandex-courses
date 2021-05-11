@@ -1,0 +1,403 @@
+body
+{
+    font: 16px Helvetica, serif;
+    color: #444;
+    margin: 0;
+}
+
+.age2::-webkit-slider-runnable-track,
+.age2::-moz-range-track
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none;
+}
+
+header
+{
+    font: 32px 'PT SansNarrow';
+    text-align: center;
+    line-height: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: content-box;
+    width: 100%;
+    z-index: 2000;
+    border-bottom: 2px solid #ccc;
+    background: #fff;
+    margin-top: -10px;
+}
+
+header > p::first-letter
+{
+    color: #f00;
+}
+
+main
+{
+    text-align: center;
+    border-top: 2px solid #ccc;
+    padding-top: 50px;
+
+}
+
+/* main */
+
+input[name='breed-input']
+{
+    display: none;
+}
+
+.cat-box
+{
+    border: 2px solid #ccc;
+    margin: 10px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.cat-photo
+{
+    width: 100%;
+    height: 100%;
+}
+
+.cat-name
+{
+    display: block;
+    color: #111;
+    font-size: 32px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.cat-name,
+.cat-long-info
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* footer */
+
+footer
+{
+    border-top: 2px solid #ccc;
+    font: 14px Arial;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.footer-left
+{
+    display: block;
+    text-align: left;
+}
+
+.write-us
+{
+    margin: 2px;
+}
+
+.write-us-list
+{
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 20px;
+}
+
+.write-us-list-item
+{
+    margin: 2px;
+}
+
+@media only screen and (max-width: 1200px)  /* mobile and tablet */
+{
+    .cat-box
+    {
+        width: 300px;
+        display: inline-block;
+    }
+
+    .cat-photo-section
+    {
+        width: 100%;
+    }
+
+    .cat-photo
+    {
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    .cat-long-info,
+    .cat-short-info,
+    .cat-name
+    {
+        margin: 10px;
+    }
+
+    .cat-long-info,
+    .sidebar
+    {
+        display: none;
+    }
+
+    /* footer */
+
+    .write-us-list-item
+    {
+        background: url(src/icons/mail.png) left center no-repeat;
+        margin: 2px;
+        padding: 0 24px;
+    }
+
+    .footer-right
+    {
+        vertical-align: bottom;
+    }
+}
+
+@media only screen and (max-width: 729px)  /* mobile */
+{
+    .cat-box
+    {
+        margin: 10px;
+        width: 85vw;
+    }
+
+    .cat-photo-section
+    {
+        height: 50vh;
+    }
+}
+
+@media only screen and (min-width: 730px) /* tablet and desktop */
+{
+    /* main */
+
+    .cat-box
+    {
+        height: 300px;
+    }
+
+    .cat-box:hover
+    {
+        box-shadow: 2px 2px 4px 2px #444;
+    }
+
+    /* footer */
+
+    footer
+    {
+        display: table;
+        table-layout: fixed;
+    }
+
+    .footer-right
+    {
+        display: table-cell;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 730px) /* tablet */
+{
+    /* main */
+
+    .cat-box
+    {
+        width: 300px;
+        height: 350px;
+    }
+
+    .cat-photo-section
+    {
+        height: 50%;
+    }
+
+    /* footer */
+
+    .write-us-list
+    {
+        margin-bottom: 0;
+    }
+
+    .footer-right
+    {
+        vertical-align: bottom;
+    }
+}
+
+@media only screen and (min-width: 1200px) /* desktop */
+{
+    /* main */
+
+    main
+    {
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .cat-box
+    {
+        width: 35vw;
+        height: 40vh;
+        display: inline-grid;
+        grid-template: 'cat-photo-section cat-name' 20%
+            'cat-photo-section cat-short-info' 40%
+            'cat-long-info cat-long-info' 40% / 50% 50%;
+    }
+
+    .cat-box > section
+    {
+        display: grid;
+    }
+
+    .cat-photo-section
+    {
+        grid-area: cat-photo-section;
+        margin: 10px;
+        overflow: hidden;
+        object-fit: none;
+    }
+
+    .cat-name
+    {
+        grid-area: cat-name;
+    }
+
+    .cat-long-info,
+    .cat-short-info,
+    .cat-name
+    {
+        margin: 5px;
+    }
+
+    .cat-short-info
+    {
+        grid-area: cat-short-info;
+    }
+
+    .cat-long-info
+    {
+        grid-area: cat-long-info;
+        margin: 0 -2px;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+    /* sidebar */
+
+    .sidebar
+    {
+        text-align: left;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .sidebar-title
+    {
+        line-height: .5rem;
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    .age-slider > input
+    {
+        width: 80%;
+    }
+
+    .age2
+    {
+        position: relative;
+        top: -22.5px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 40px;
+    }
+
+    .age-slider label
+    {
+        padding: 2vh 0 ;
+        display: block;
+    }
+
+    .breed-picker > label
+    {
+        display: block;
+        font-size: 18px;
+        height: 30px;
+        width: 90%;
+        border: 2px solid #ccc;
+        border-radius: 2px;
+        padding: 1em .7em .7em .4em;
+        margin: 1vh 0;
+    }
+
+    .no-breed:checked ~ article .cat-box:not(.no-breed),
+    .angora:checked ~ article .cat-box:not(.angora),
+    .maine:checked ~ article .cat-box:not(.maine),
+    .wirehair:checked ~ article .cat-box:not(.wirehair),
+    .siberian:checked ~ article .cat-box:not(.siberian)
+    {
+        display: none;
+    }
+
+    .no-filter:checked ~ aside .no-filter,
+    .no-breed:checked ~ aside .no-breed,
+    .angora:checked ~ aside .angora,
+    .maine-coon:checked ~ aside .maine-coon,
+    .wirehair:checked ~ aside .wirehair,
+    .siberian:checked ~ aside .siberian
+    {
+        border-color: #9e9;
+        color: #9e9;
+    }
+
+    /* footer */
+
+    footer
+    {
+        padding: 0 40px;
+    }
+
+    .footer-left,
+    .footer-right
+    {
+        height: 100%;
+        padding-top: 10px;
+    }
+
+    .write-us
+    {
+        display: inline;
+        background: url(src/icons/mail.png) left center no-repeat;
+        padding-left: 24px;
+    }
+
+    .write-us-list
+    {
+        display: inline-block;
+    }
+
+    .write-us-list-item
+    {
+        display: inline;
+    }
+
+    .write-us-list-item:nth-child(2)::before
+    {
+        content: '\2022';
+        font-size: 16px;
+        padding-right: 5px;
+    }
+}

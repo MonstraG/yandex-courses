@@ -1,0 +1,524 @@
+body
+{
+    font-family: 'YS Text', 'Helvetica Neue', Arial, sans-serif;
+    -moz-font-feature-settings: 'liga', 'kern';
+    font-feature-settings: 'liga', 'kern';
+    color: #000;
+
+    padding: 1%;
+    display: grid;
+    grid-template: 'header aside' 42px
+        'main aside' auto / auto 180px;
+}
+
+header
+{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+main
+{
+    display: grid;
+    grid-area: main;
+    justify-items: right;
+}
+
+main article
+{
+    font-size: 80%;
+    width: 900px;
+}
+
+aside
+{
+    grid-area: aside;
+}
+
+input[type='radio'],
+input[type='checkbox']
+{
+    display: none;
+}
+
+label
+{
+    cursor: pointer;
+}
+
+/* links */
+/* yes, all of them */
+
+a
+{
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .15s ease-out;
+    -webkit-transition: color .15s ease-out;
+}
+
+a:hover
+{
+    color: #c00;
+}
+
+.gray-text
+{
+    color: #999;
+}
+
+.bold-text
+{
+    font-weight: 700;
+}
+
+/* header */
+
+.location
+{
+    display: inline;
+    padding-left: 30px;
+    width: 120px;
+    height: 30px;
+    font-size: 80%;
+    color: #999;
+    justify-self: left;
+}
+
+.location:hover
+{
+    color: #c00;
+}
+
+.location:not(:hover)
+{
+    filter: grayscale(100%);
+}
+
+.options
+{
+    justify-self: right;
+    font-size: 80%;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.options-menu
+{
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 2px 6px 0 rgba(0,0,0,.1);
+    padding: 5px;
+    position: absolute;
+    background-color: #fff;
+    margin: 5px 0 0 -65px;
+    width: 180px;
+    display: none;
+}
+
+.inp-options:checked ~ .options-menu
+{
+    display: block;
+}
+
+.options-menu > label
+{
+    display: block;
+    z-index: 100;
+    text-align: left;
+    line-height: 1.5em;
+    height: 20px;
+}
+
+.options-menu > label:before
+{
+    content: '';
+    border: 1px #666 solid;
+    border-radius: 4px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin: 2px 4px 0 0;
+    vertical-align: -2px;
+}
+
+.options-menu > label:after
+{
+    content: '';
+    position: relative;
+    left: 10px;
+    top: -9px;
+    width: 2px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: none;
+}
+
+.inp-popular:checked ~ header label[for='popular']:after,
+.inp-anecdotes:checked ~ header label[for='anecdotes']:after,
+.inp-tv-schedule:checked ~ header label[for='tv-schedule']:after,
+.inp-car-news:checked ~ header label[for='car-news']:after,
+.inp-weather:checked ~ header label[for='weather']:after,
+.inp-traffic:checked ~ header label[for='traffic']:after,
+.inp-map:checked ~ header label[for='map']:after,
+.inp-afisha:checked ~ header label[for='afisha']:after
+{
+    display: block;
+    left: 5px;
+    top: -15px;
+}
+
+.inp-popular:checked ~ header label[for='popular']:before,
+.inp-anecdotes:checked ~ header label[for='anecdotes']:before,
+.inp-tv-schedule:checked ~ header label[for='tv-schedule']:before,
+.inp-car-news:checked ~ header label[for='car-news']:before,
+.inp-weather:checked ~ header label[for='weather']:before,
+.inp-traffic:checked ~ header label[for='traffic']:before,
+.inp-map:checked ~ header label[for='map']:before,
+.inp-afisha:checked ~ header label[for='afisha']:before
+{
+    background-color: #2196f3;
+    border-color: #fff;
+}
+
+.widget,
+.column1,
+.column2
+{
+    display: none;
+}
+
+.inp-popular:checked ~ main .popular,
+.inp-anecdotes:checked ~ main .anecdotes,
+.inp-tv-schedule:checked ~ main .tv-schedule,
+.inp-car-news:checked ~ main .car-news,
+.inp-weather:checked ~ main .weather,
+.inp-traffic:checked ~ main .traffic,
+.inp-map:checked ~ main .map,
+.inp-afisha:checked ~ main .afisha,
+.inp-popular:checked ~ main .column1,
+.inp-anecdotes:checked ~ main .column1,
+.inp-tv-schedule:checked ~ main .column2,
+.inp-car-news:checked ~ main .column2
+{
+    display: block;
+}
+
+/* aside */
+
+.login
+{
+    padding: 10px;
+    width: 95%;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 2px 6px 0 rgba(0,0,0,.1);
+    box-sizing: border-box;
+}
+
+.account
+{
+    display: block;
+    padding-bottom: 10px;
+    font-size: 80%;
+}
+
+.account:first-letter
+{
+    color: #f00;
+}
+
+.account,
+.mail,
+.mail-counter
+{
+    font-size: 80%;
+}
+
+/* main */
+
+/* news */
+
+.news-block
+{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-bottom: 30px;
+}
+
+.news-title
+{
+    display: inline;
+    padding-right: 10px;
+}
+
+.news-time
+{
+    font: 80% Verdana, Helvetica, Arial, sans-serif;
+}
+
+.news-list
+{
+    margin: 2px 0 0 -40px;
+    line-height: 200%;
+    font-size: 100%;
+    padding-bottom: 5px;
+}
+
+.stock
+{
+    letter-spacing: .6px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.stock-change
+{
+    color: #069922;
+}
+
+.news-teaser
+{
+    display: grid;
+    align-items: end;
+}
+
+.teaser-title
+{
+    color: #0054b9;
+    margin: 2px 0;
+}
+
+.teaser-desc
+{
+    display: block;
+    width: 60%;
+}
+
+/* search */
+
+.logo
+{
+    height: 42px;
+    position: absolute;
+    margin: -6px 0 0 -120px;
+}
+
+.search-link
+{
+    display: inline;
+    margin-right: 20px;
+    color: #0054b9;
+    font-size: 123%;
+}
+
+.search-bar-section
+{
+    display: grid;
+    grid-template-columns: 0 750px 90px 0;
+}
+
+.search-bar,
+.search-button
+{
+    height: 30px;
+}
+
+.search-bar
+{
+    border: 2px solid #fc0;
+    width: 750px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.search-bar-input-types
+{
+    position: absolute;
+    margin: 5px 675px;
+}
+
+.search-button
+{
+    width: 88px;
+    height: 36px;
+    background-color: #fc0;
+    border: 2px solid #fc0;
+    margin-left: -4px;
+    font-size: 16px;
+}
+
+.search-button-arrow
+{
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 10px solid #fc0;
+    margin-left: -6px;
+}
+
+.search-example
+{
+    padding-top: 10px;
+    display: inline;
+}
+
+/* ford ad */
+
+.ford
+{
+    padding: 20px 0;
+}
+
+/* widgets */
+
+.widget
+{
+    padding: 0 0 10px 10px;
+}
+
+main article:last-of-type /* I'd use class, but not allowed for article */
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.search-links-list,
+.widget-list
+{
+    list-style-type: none;
+    margin: 0 0 10px -40px;
+    line-height: 200%;
+}
+
+.widget-list
+{
+    margin-top: -10px;
+}
+
+.widget-title
+{
+    color: #0054b9;
+    font-weight: 500;
+}
+
+.widget-title-complex > h2,
+.widget-title-complex > form,
+.widget-title-complex > img
+{
+    display: inline-block;
+}
+
+.widget-title-second
+{
+    color: #62a2e1;
+    font-size: 123%;
+}
+
+/* widget anecdotes */
+
+.anecdote-text
+{
+    padding-top: 5px;
+    display: block;
+}
+
+.anecdote
+{
+    display: none;
+}
+
+.inp-anecdote:checked + .anecdote
+{
+    display: block;
+}
+
+.show-more
+{
+    display: block;
+    margin-top: 50px;
+}
+
+.show-more:hover
+{
+    color: #c00;
+}
+
+.show-more > img
+{
+    position: absolute;
+    margin: 0;
+}
+
+.show-more > span
+{
+    padding-left: 20px;
+}
+
+/* widget tv-schedule */
+
+.tv-link-button
+{
+    background: linear-gradient(to right, #4e4dff, #8a2be2);
+    color: #fff;
+    border: 2px #fff solid;
+    border-radius: 6px;
+    line-height: 26px;
+    cursor: pointer;
+}
+
+/* widget car-news */
+
+.car-news-list
+{
+    height: 300px;
+    overflow-y: hidden;
+    width: 90%;
+
+    mask-image: linear-gradient(
+        rgba(0,0,0,0), #fff,  #fff, #fff, rgba(0,0,0,0));
+}
+
+.car-news-list:hover
+{
+    overflow-y: scroll;
+}
+
+.car-news-item
+{
+    width: 90%;
+    display: inline-block;
+    line-height: 1rem;
+    padding-bottom: 15px;
+}
+
+.car-news-time
+{
+    font-size: 80%;
+}
+
+/* weather and traffic */
+
+.widget-title-img
+{
+    transform: scale(.8);
+    position: absolute;
+    margin-top: 8px;
+}
+
+.widget-title-after-image
+{
+    font-size: 160%;
+    padding-left: 42px;
+}
+
+/* map */
+
+.widget-map-text
+{
+    word-spacing: 14px;
+}
